@@ -16,15 +16,15 @@ export default function OgImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 72,
-          background: "radial-gradient(circle at 80% 20%, #f2541b33, transparent 50%), radial-gradient(circle at 10% 90%, #7c3aed2e, transparent 50%), #ffffff",
-          color: "#0d0d14",
+          background: "radial-gradient(circle at 80% 20%, #0f766e26, transparent 50%), radial-gradient(circle at 10% 90%, #115e591f, transparent 50%), #ffffff",
+          color: "#0f172a",
           fontFamily: "sans-serif",
         }}
       >
         <div style={{ fontSize: 36, fontWeight: 800, display: "flex" }}>{site.name}</div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 84, fontWeight: 800, lineHeight: 1.02, letterSpacing: -3 }}>Laptops on rent.</div>
-          <div style={{ fontSize: 84, fontWeight: 800, lineHeight: 1.02, letterSpacing: -3, color: "#f2541b" }}>Delivered in hours.</div>
+          <div style={{ fontSize: 84, fontWeight: 800, lineHeight: 1.02, letterSpacing: -3, color: "#0f766e" }}>Delivered in hours.</div>
         </div>
         <div style={{ fontSize: 30, color: "#62616e", display: "flex" }}>
           Laptops · MacBooks · Desktops · Servers · Chennai · Bangalore · Hyderabad
