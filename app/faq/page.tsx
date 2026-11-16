@@ -7,7 +7,7 @@ import CtaBand from "@/components/CtaBand";
 
 export const metadata = pageMeta({
   title: "Laptop Rental FAQ: Deposit, Delivery, Damage & Documents",
-  description: "Answers to common questions about renting laptops: documents, security deposit, delivery time, damage, GST invoices, extensions and rent-to-own.",
+  description: "Answers to common questions about renting laptops: documents, security deposit, delivery time, damage, GST invoices, hourly billing and extensions.",
   path: "/faq",
 });
 

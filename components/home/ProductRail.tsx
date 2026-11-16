@@ -57,7 +57,11 @@ export default function ProductRail() {
               <p>{p.short}</p>
               <div className="rail-foot">
                 <span>
-                  from <strong>₹{p.from.toLocaleString("en-IN")}</strong>/mo
+                  {p.hourly ? (
+                    <>from <strong>₹{p.hourly}</strong>/hr</>
+                  ) : (
+                    <>from <strong>₹{p.from.toLocaleString("en-IN")}</strong>/mo</>
+                  )}
                 </span>
                 <span className="arrow" aria-hidden>→</span>
               </div>

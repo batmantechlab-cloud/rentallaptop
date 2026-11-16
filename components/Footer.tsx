@@ -13,9 +13,9 @@ export default function Footer() {
             </span>
             {site.name}
           </Link>
-          <p>{site.tagline} Laptops, MacBooks, desktops, workstations and servers on rent for businesses, events and individuals since {site.founded}.</p>
+          <p>{site.tagline} Laptops, MacBooks, desktops and workstations on rent for businesses and individuals since {site.founded}.</p>
           <address>
-            {site.address.street}, {site.address.city} {site.address.postalCode}, {site.address.region}
+            {[site.address.street, site.address.city, site.address.postalCode].filter(Boolean).join(", ")}, {site.address.region}
             <br />
             <a href={site.phoneHref}>{site.phone}</a> · <a href={`mailto:${site.email}`}>{site.email}</a>
           </address>
@@ -35,7 +35,7 @@ export default function Footer() {
           <ul>
             {locations.map((l) => (
               <li key={l.slug}>
-                <Link href={`/locations/${l.slug}`}>Laptop rental in {l.city}</Link>
+                <Link href={`/locations/${l.slug}`}>{l.city}</Link>
               </li>
             ))}
           </ul>
@@ -53,7 +53,7 @@ export default function Footer() {
       </div>
       <div className="container footer-bottom">
         <span>© {year} {site.legalName} All rights reserved.</span>
-        <span>GST-billed rentals · Chennai · Bangalore · Hyderabad</span>
+        <span>GST-billed rentals · Chennai</span>
       </div>
     </footer>
   );

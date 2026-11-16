@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!l) return {};
   return pageMeta({
     title: `Laptop on Rent in ${l.city} | ${l.delivery} Delivery`,
-    description: `Rent laptops, MacBooks, desktops and servers in ${l.city}. ${l.delivery} delivery to ${l.areas.slice(0, 4).join(", ")} and more. Daily, weekly & monthly plans with free setup.`,
+    description: `Rent laptops, MacBooks and desktops in ${l.city}. ${l.delivery} delivery to ${l.areas.slice(0, 4).join(", ")} and more. Hourly, daily, weekly & monthly plans with free setup.`,
     path: `/locations/${l.slug}`,
     keywords: [`laptop on rent in ${l.city}`, `laptop rental ${l.city}`, `MacBook rental ${l.city}`, ...l.areas.map((a) => `laptop rental ${a}`)],
   });

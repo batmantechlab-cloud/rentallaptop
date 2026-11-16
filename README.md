@@ -1,4 +1,4 @@
-# Rentiva – Laptop Rental Website
+# Rentalloop – Laptop Rental Website
 
 Next.js 16 static marketing site for a laptop / IT equipment rental business.
 

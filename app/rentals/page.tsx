@@ -8,9 +8,9 @@ import Icon from "@/components/Icon";
 import CtaBand from "@/components/CtaBand";
 
 export const metadata = pageMeta({
-  title: "Rent Laptops, MacBooks, Desktops, Servers & More",
+  title: "Rent Laptops, MacBooks, Desktops & Workstations",
   description:
-    "Browse every device we rent: business laptops, MacBooks, gaming laptops, workstations, desktops, servers, iPads and projectors. Daily, weekly and monthly plans with free delivery.",
+    "Browse every device we rent: business laptops, MacBooks, gaming laptops, workstations and desktops. Hourly, daily, weekly and monthly plans with free delivery.",
   path: "/rentals",
   keywords: ["IT equipment rental", "computer rental", "laptop rental plans"],
 });
@@ -27,7 +27,7 @@ export default function Rentals() {
       <PageHero
         eyebrow="All rentals"
         title={<>Every machine your team needs, <em>on rent.</em></>}
-        lead="Eight categories, 18,000+ devices, all tested, imaged and delivered with free setup. Pick a category to see configurations and prices."
+        lead="Laptops, MacBooks, gaming laptops, workstations and desktops, all tested, imaged and delivered with free setup. Pick a category to see configurations and prices."
         crumbs={crumbs}
       />
       <section className="section">
@@ -39,7 +39,7 @@ export default function Rentals() {
                 <h2>{p.keyword}</h2>
                 <p>{p.short}</p>
                 <span className="cat-price">
-                  from <strong>₹{p.daily}</strong>/day · <strong>₹{p.from.toLocaleString("en-IN")}</strong>/mo
+                  from {p.hourly ? <><strong>₹{p.hourly}</strong>/hr</> : <><strong>₹{p.daily}</strong>/day</>} · <strong>₹{p.from.toLocaleString("en-IN")}</strong>/mo
                 </span>
                 <span className="arrow" aria-hidden>→</span>
               </Link>

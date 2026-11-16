@@ -1,18 +1,9 @@
-"use client";
 import { industries } from "@/lib/site";
 import Reveal from "@/components/Reveal";
 import Icon from "@/components/Icon";
 
-/** Industry cards with a cursor-following spotlight border. */
+/** Who rents from us, as a simple point-wise list. */
 export default function Bento() {
-  const onMove = (e: React.PointerEvent<HTMLDivElement>) => {
-    const grid = e.currentTarget;
-    for (const card of Array.from(grid.children) as HTMLElement[]) {
-      const r = card.getBoundingClientRect();
-      card.style.setProperty("--x", `${e.clientX - r.left}px`);
-      card.style.setProperty("--y", `${e.clientY - r.top}px`);
-    }
-  };
   return (
     <section className="section" aria-labelledby="who-title">
       <div className="container">
@@ -20,15 +11,17 @@ export default function Bento() {
         <h2 id="who-title" className="h2">
           Built for <em>every kind of team.</em>
         </h2>
-        <div className="bento" onPointerMove={onMove}>
+        <ul className="who-list">
           {industries.map((it, i) => (
-            <Reveal key={it.title} delay={i * 0.06} className={`bento-card b${i}`}>
-              <span className="bento-icon" aria-hidden><Icon name={it.icon} size={24} /></span>
-              <h3>{it.title}</h3>
-              <p>{it.text}</p>
+            <Reveal key={it.title} as="li" delay={i * 0.05}>
+              <span className="who-icon" aria-hidden><Icon name={it.icon} size={20} /></span>
+              <div>
+                <h3>{it.title}</h3>
+                <p>{it.text}</p>
+              </div>
             </Reveal>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

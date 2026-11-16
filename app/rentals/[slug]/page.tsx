@@ -24,8 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const p = products.find((x) => x.slug === slug);
   if (!p) return {};
   return pageMeta({
-    title: `${p.keyword} in Chennai from ₹${p.daily}/day`,
-    description: `${p.keyword} for businesses, events and individuals. ${p.brands.slice(0, 3).join(", ")} and more from ₹${p.from.toLocaleString("en-IN")}/month. Same-day delivery, free setup & support.`,
+    title: p.hourly ? `${p.keyword} in Chennai from ₹${p.hourly}/hour` : `${p.keyword} in Chennai from ₹${p.daily}/day`,
+    description: `${p.keyword} for businesses, events and individuals. ${p.brands.slice(0, 3).join(", ")} and more from ₹${p.from.toLocaleString("en-IN")}/month. Hourly plans, 4-hour delivery in Chennai, free setup & support.`,
     path: `/rentals/${p.slug}`,
     keywords: [p.keyword, `${p.keyword} Chennai`, `${p.name} rental`, ...p.brands.map((b) => `${b} on rent`)],
   });
@@ -74,7 +74,11 @@ export default async function ProductPage({ params }: Props) {
                   ₹{c.month.toLocaleString("en-IN")}
                   <small>/month</small>
                 </p>
-                <p className="plan-day">or ₹{Math.round(c.month * 0.25).toLocaleString("en-IN")}/day</p>
+                <p className="plan-day">
+                  {c.hourly
+                    ? `or ₹${c.hourly}/hour · max ₹${c.dailyMax}/day`
+                    : `or ₹${Math.round(c.month * 0.25).toLocaleString("en-IN")}/day`}
+                </p>
                 <ul>
                   <li>Free delivery & setup</li>
                   <li>4-hour replacement</li>
@@ -83,7 +87,7 @@ export default async function ProductPage({ params }: Props) {
               </Reveal>
             ))}
           </div>
-          <p className="fine">Prices exclude GST. Annual plans get up to 15% off.</p>
+          <p className="fine">Prices exclude GST. Minimum 3 billable hours per day. Refundable security deposit of at least one month&apos;s rent.</p>
         </div>
       </section>
 

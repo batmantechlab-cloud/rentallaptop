@@ -7,8 +7,8 @@ import Reveal from "@/components/Reveal";
 import CtaBand from "@/components/CtaBand";
 
 export const metadata = pageMeta({
-  title: "Laptop Rental Locations: Chennai, Bangalore, Hyderabad & More",
-  description: "We deliver rental laptops, MacBooks, desktops and servers across Chennai, Bangalore, Hyderabad, Coimbatore, Pune and Mumbai. Same-day delivery in metro cities.",
+  title: "Laptop Rental in Chennai: Delivery Areas",
+  description: "We deliver rental laptops, MacBooks and desktops across Chennai, with 4-hour delivery inside city limits.",
   path: "/locations",
 });
 
@@ -24,7 +24,7 @@ export default function Locations() {
       <PageHero
         eyebrow="Service areas"
         title={<>Wherever work happens, <em>we deliver.</em></>}
-        lead="Warehouses in Chennai, Bangalore and Hyderabad, with next-day delivery to Coimbatore, Pune and Mumbai."
+        lead="4-hour delivery anywhere inside Chennai city limits."
         crumbs={crumbs}
       />
       <section className="section">

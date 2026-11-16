@@ -3,12 +3,11 @@ import { pageMeta, breadcrumbLd } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
-import Counters from "@/components/home/Counters";
 import CtaBand from "@/components/CtaBand";
 
 export const metadata = pageMeta({
   title: `About ${site.name}: IT Rentals Since ${site.founded}`,
-  description: `${site.name} has rented laptops, desktops and servers to 2,400+ businesses since ${site.founded}. Learn about our fleet, process and the team behind it.`,
+  description: `${site.name} rents laptops, MacBooks and desktops by the hour, day, week or month in Chennai. Learn about our fleet, process and the team behind it.`,
   path: "/about",
 });
 
@@ -31,10 +30,9 @@ export default function About() {
       <PageHero
         eyebrow={`Since ${site.founded}`}
         title={<>We make hardware <em>feel like software.</em></>}
-        lead={`${site.name} started in a 400 sq. ft. room in Chennai with 30 laptops and one van. Today we run an 18,000-device fleet across six cities, with one promise: the right machine, on your desk, the same day.`}
+        lead={`${site.name} is a Chennai laptop rental company with one promise: the right machine on your desk, for exactly as long as you need it, by the hour, day, week or month.`}
         crumbs={crumbs}
       />
-      <Counters />
       <section className="section" aria-labelledby="values-title">
         <div className="container">
           <p className="eyebrow">How we work</p>

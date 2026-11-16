@@ -6,7 +6,7 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata = pageMeta({
   title: "Contact Us: Get a Laptop Rental Quote in 15 Minutes",
-  description: `Call ${site.phone}, WhatsApp or email ${site.email} for laptop, desktop and server rental quotes. Office in Chennai. Open Monday to Saturday, 9 AM to 8 PM.`,
+  description: `Call ${site.phone}, WhatsApp or email ${site.email} for laptop, MacBook and desktop rental quotes. Office in Chennai. Open Monday to Saturday, 9 AM to 8 PM.`,
   path: "/contact",
 });
 
@@ -16,7 +16,7 @@ const crumbs = [
 ];
 
 export default function Contact() {
-  const mapQ = encodeURIComponent(`${site.address.street}, ${site.address.city}`);
+  const mapQ = encodeURIComponent([site.address.street, site.address.city].filter(Boolean).join(", "));
   return (
     <>
       <JsonLd data={breadcrumbLd(crumbs)} />
@@ -41,9 +41,13 @@ export default function Contact() {
             <div>
               <h2 className="h3">Visit</h2>
               <address>
-                {site.address.street}
-                <br />
-                {site.address.city} {site.address.postalCode}, {site.address.region}
+                {site.address.street && (
+                  <>
+                    {site.address.street}
+                    <br />
+                  </>
+                )}
+                {[site.address.city, site.address.postalCode].filter(Boolean).join(" ")}, {site.address.region}
               </address>
               <p className="muted">Mon–Sat, 9 AM – 8 PM</p>
               <a className="link" href={`https://www.google.com/maps/search/?api=1&query=${mapQ}`} target="_blank" rel="noopener noreferrer">

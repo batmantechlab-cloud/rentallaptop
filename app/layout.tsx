@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `Laptop on Rent in Chennai | MacBook, Desktop & Server Rental – ${site.name}`,
+    default: `Laptop on Rent in Chennai | Hourly MacBook & Desktop Rental – ${site.name}`,
     template: `%s | ${site.name}`,
   },
   description: site.description,
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     "laptop on rent in Chennai",
     "MacBook on rent",
     "desktop rental",
-    "server rental",
+    "hourly laptop rental",
     "workstation on rent",
     "gaming laptop on rent",
     "rent laptop for events",

@@ -47,10 +47,10 @@ export const organizationLd = () => ({
   foundingDate: site.founded,
   address: {
     "@type": "PostalAddress",
-    streetAddress: site.address.street,
+    ...(site.address.street && { streetAddress: site.address.street }),
     addressLocality: site.address.city,
     addressRegion: site.address.region,
-    postalCode: site.address.postalCode,
+    ...(site.address.postalCode && { postalCode: site.address.postalCode }),
     addressCountry: site.address.country,
   },
   geo: { "@type": "GeoCoordinates", latitude: site.geo.lat, longitude: site.geo.lng },
@@ -59,11 +59,6 @@ export const organizationLd = () => ({
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     opens: "09:00",
     closes: "20:00",
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: site.rating.value,
-    reviewCount: site.rating.count,
   },
   sameAs: Object.values(site.social),
 });
@@ -106,7 +101,7 @@ export const productLd = (p: Product) => ({
   serviceType: p.keyword,
   description: p.intro,
   provider: { "@id": abs("/#business") },
-  areaServed: ["Chennai", "Bangalore", "Hyderabad", "Coimbatore", "Pune", "Mumbai"],
+  areaServed: ["Chennai"],
   url: abs(`/rentals/${p.slug}`),
   offers: {
     "@type": "AggregateOffer",

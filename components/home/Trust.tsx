@@ -1,13 +1,12 @@
 import Icon from "@/components/Icon";
 import Reveal from "@/components/Reveal";
-import { site } from "@/lib/site";
 
 const strip = [
   { icon: "award", t: "ISO 9001:2015", d: "Certified processes" },
-  { icon: "star", t: `${site.rating.value}/5 rating`, d: `${site.rating.count.toLocaleString("en-IN")}+ reviews` },
+  { icon: "clock", t: "Hourly rental", d: "From ₹69 an hour" },
   { icon: "receipt", t: "GST invoices", d: "Claim full input credit" },
   { icon: "shield", t: "Insured devices", d: "Covered in transit & use" },
-  { icon: "clock", t: "Since 2014", d: "2,400+ business clients" },
+  { icon: "lock", t: "Certified data wipe", d: "On every return" },
 ];
 
 const guarantees = [

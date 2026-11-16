@@ -27,7 +27,7 @@ export default function OgImage() {
           <div style={{ fontSize: 84, fontWeight: 800, lineHeight: 1.02, letterSpacing: -3, color: "#7a1f35" }}>Delivered in hours.</div>
         </div>
         <div style={{ fontSize: 30, color: "#62616e", display: "flex" }}>
-          Laptops · MacBooks · Desktops · Servers · Chennai · Bangalore · Hyderabad
+          Laptops · MacBooks · Desktops · Hourly rental · Chennai
         </div>
       </div>
     ),
