@@ -18,6 +18,8 @@ const chips = [
   { label: "GST invoice for businesses", from: 0.36 },
   { label: "Free on-site support", from: 0.4 },
   { label: "Hybrid way of renting", from: 0.44 },
+  { label: "1-day security deposit refund", from: 0.48 },
+  { label: "24×7 support by a real person", from: 0.52 },
 ];
 
 /**
@@ -127,7 +129,7 @@ function HeroCopy() {
         <span className="pulse" /> Hourly laptop rental in Chennai
       </p>
       <h1 id="hero-title" className="hero-title">
-        Laptop rental for business.
+        Rentalloop.
         <br />
         <em>Delivered in 4 hours.</em>
       </h1>

@@ -209,7 +209,7 @@ export const locations: Location[] = [
 export const faqs = [
   { q: "How fast can you deliver a rental laptop?", a: "Within 4 hours inside Chennai city limits." },
   { q: "What documents do I need to rent a laptop?", a: "Businesses need a GST certificate, company PAN and a purchase order. Individuals need an Aadhaar or passport, a PAN card and a refundable security deposit." },
-  { q: "Is there a security deposit?", a: "Yes. Every customer pays a refundable security deposit of at least one month's rent. It is returned within 3 working days of the device coming back." },
+  { q: "Is there a security deposit?", a: "Yes. Every customer pays a refundable security deposit of at least one month's rent. It is returned within 1 working day of the device coming back." },
   { q: "Can I extend or end my rental early?", a: "Yes. Rentals are billed by the hour, so you can extend anytime with a WhatsApp message or return the device early and pay only for the hours used (minimum 3 hours per day). Weekly and monthly packages can also be extended." },
   { q: "What if the laptop gets damaged?", a: "Hardware faults and normal wear are on us. Accidental damage such as a cracked screen or liquid spill is charged at actual repair cost, or covered fully with our optional Rentalloop Protect plan." },
   { q: "Will I get a GST invoice?", a: "Yes. Every rental comes with a GST-compliant tax invoice so businesses can claim input tax credit." },

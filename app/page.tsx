@@ -1,8 +1,7 @@
-import { brands, faqs, site } from "@/lib/site";
+import { faqs, site } from "@/lib/site";
 import { faqLd } from "@/lib/seo";
 import JsonLd from "@/components/JsonLd";
 import HeroLaptop from "@/components/home/HeroLaptop";
-import Marquee from "@/components/home/Marquee";
 import ProductRail from "@/components/home/ProductRail";
 import Steps from "@/components/home/Steps";
 import Bento from "@/components/home/Bento";
@@ -22,7 +21,6 @@ export default function Home() {
       <ProductRail />
       <Calculator />
 
-      <Marquee items={brands} label="Brands we rent" />
       <Steps />
       <Bento />
 
